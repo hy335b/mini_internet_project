@@ -48,7 +48,7 @@ for ((k=0;k<group_numbers;k++)); do
             -v /etc/timezone:/etc/timezone:ro \
             -v /etc/localtime:/etc/localtime:ro \
             -v "${DIRECTORY}"/config/welcoming_message.txt:/etc/motd:ro \
-            thomahol/d_ssh
+            335b/d_ssh
 
         CONTAINERS+=("${group_number}_ssh")
 
@@ -70,7 +70,7 @@ for ((k=0;k<group_numbers;k++)); do
                 --sysctl net.ipv4.conf.lo.rp_filter=0 \
                 --sysctl net.ipv4.icmp_echo_ignore_broadcasts=0 \
                 -v /etc/timezone:/etc/timezone:ro \
-                -v /etc/localtime:/etc/localtime:ro thomahol/d_switch
+                -v /etc/localtime:/etc/localtime:ro 335b/d_switch
 
             CONTAINERS+=(${group_number}_L2_${l2name}_${sname})
         done
@@ -125,7 +125,7 @@ for ((k=0;k<group_numbers;k++)); do
                 -v "${location}"/daemons:/etc/frr/daemons \
                 -v "${location}"/frr.conf:/etc/frr/frr.conf \
                 -v /etc/timezone:/etc/timezone:ro \
-                -v /etc/localtime:/etc/localtime:ro thomahol/d_router
+                -v /etc/localtime:/etc/localtime:ro 335b/d_router
 
             CONTAINERS+=("${group_number}""_""${rname}""router")
 
@@ -160,7 +160,7 @@ for ((k=0;k<group_numbers;k++)); do
             --sysctl net.ipv4.icmp_echo_ignore_broadcasts=0 \
             -v /etc/timezone:/etc/timezone:ro \
             -v /etc/localtime:/etc/localtime:ro \
-            thomahol/d_ixp
+            335b/d_ixp
 
        CONTAINERS+=("${group_number}""_IXP")
     fi

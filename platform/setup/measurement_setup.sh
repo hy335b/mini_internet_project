@@ -40,7 +40,7 @@ else
         --name="MEASUREMENT" --cpus=2 --pids-limit 100 \
         -v /etc/timezone:/etc/timezone:ro \
         -v /etc/localtime:/etc/localtime:ro \
-        --cap-add=NET_ADMIN thomahol/d_measurement
+        --cap-add=NET_ADMIN 335b/d_measurement
 
     # cache the docker pid for ovs-docker.sh
     source ${DIRECTORY}/groups/docker_pid.map

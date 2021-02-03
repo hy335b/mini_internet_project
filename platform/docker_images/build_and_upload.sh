@@ -23,7 +23,7 @@ docker login
 
 # If you want to use your custom docker containers and upload them into
 # docker hub, change the docker username with your own docker username.
-docker_name=thomahol
+docker_name=335b
 
 container_name=d_router
 docker tag "${container_name}" "${docker_name}"/"${container_name}"

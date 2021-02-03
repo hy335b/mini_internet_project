@@ -46,7 +46,7 @@ else
         -v /etc/timezone:/etc/timezone:ro \
         -v /etc/localtime:/etc/localtime:ro \
         -v "${DIRECTORY}"/config/welcoming_message.txt:/etc/motd:rw \
-        -v "${location}"/destination_ips.txt:/home/destination_ips.txt thomahol/d_matrix
+        -v "${location}"/destination_ips.txt:/home/destination_ips.txt 335b/d_matrix
 
     # cache the docker pid for ovs-docker.sh
     source ${DIRECTORY}/groups/docker_pid.map

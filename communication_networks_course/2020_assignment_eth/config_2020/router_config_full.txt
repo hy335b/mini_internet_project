@@ -1,8 +1,8 @@
-LOND	DNS	host:thomahol/d_host
+LOND	DNS	host:335b/d_host
 ZURI	MEASUREMENT	L2-UNIV
-PARI	MATRIX host:thomahol/d_host
+PARI	MATRIX host:335b/d_host
 GENE	N/A	L2-UNIV
-NEWY	N/A	host:thomahol/d_host
-BOST	N/A	host:thomahol/d_host
-ATLA	MATRIX_TARGET  host:thomahol/d_host
-MIAM	N/A	host:thomahol/d_host
+NEWY	N/A	host:335b/d_host
+BOST	N/A	host:335b/d_host
+ATLA	MATRIX_TARGET  host:335b/d_host
+MIAM	N/A	host:335b/d_host

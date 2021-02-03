@@ -41,7 +41,7 @@ else
     docker run -itd --net='none' --name="DNS" --privileged \
         -v /etc/timezone:/etc/timezone:ro \
         -v /etc/localtime:/etc/localtime:ro \
-        thomahol/d_dns
+        335b/d_dns
 
     # cache the container pid for ovs-docker.sh
     source "${DIRECTORY}/groups/docker_pid.map"
