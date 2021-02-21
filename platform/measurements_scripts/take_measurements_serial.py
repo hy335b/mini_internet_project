@@ -19,13 +19,18 @@ def connect_and_collect(router_group, router_name):
 
 def all_routers():
 
-    all_groups=list(range(1, 41, 1))
+    tier1_stubs = list(range(1, 102, 20)) + list(range(2, 103, 20)) + [13, 14, 33, 34, 53, 54, 71, 72, 91, 92, 111, 112]
+    tier2 = list(range(3, 13, 1)) + list(range(23, 33, 1)) + list(range(43, 53, 1)) + list(range(63, 71, 1)) + list(range(83, 91, 1)) + list(range(103, 111, 1))
 
-    all_locations=['HOUS','NEWY','LOND','BARC','ABID','ATH','ROMA','TOKY']
+    routers_tier1_stubs=['LOND', 'ZURI']
+    routers_tier2=['LOND','ZURI','PARI','GENE','NEWY','BOST','ATLA','MIAM']
 
+    for group_id in tier1_stubs:
+        for loc in routers_tier1_stubs:
+            connect_and_collect(group_id,loc)
 
-    for group_id in all_groups:
-        for loc in all_locations:
+    for group_id in tier2:
+        for loc in routers_tier2:
             connect_and_collect(group_id,loc)
 
 
